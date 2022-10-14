@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+
+
+{% block title %}
+Project Details
+{% endblock title %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row m-2">
+        <div class="col-md">
+            <h3 class="alert alert-success text-center">Project List</h3>
+            <div class="card card-body">
+
+                <table class="">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Project Title</th>
+                        <th>Project Guide</th>
+                        <th>Team Name </th>
+                    </tr>
+
+                    {% for project in projects %}
+
+
+
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{project.project_title}}</td>
+                        <td>{{project.project_guide}}</td>
+                        <td>{{project.team_name}} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

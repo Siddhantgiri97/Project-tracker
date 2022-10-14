@@ -1,0 +1,64 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+
+
+{% block title %}
+Team Details
+{% endblock title %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row m-2">
+        <div class="col-md">
+            <h3 class="alert alert-success text-center">Team List</h3>
+            <div class="card card-body">
+
+                <table class="">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Team Name</th>
+                        <th>Members</th>
+                        
+                    </tr>
+
+                    {% for team in teams %}
+
+
+
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+
+                        <td>{{team.team_name}}</td>
+                        <td>
+                            <table>
+                            <tr>
+                                <td>{{team.member1}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{team.member2}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{team.member3}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{team.member4}}</td>
+                            </tr>
+                            
+                            
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

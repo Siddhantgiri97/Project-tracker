@@ -8,6 +8,8 @@ urlpatterns = [
     path('', include('home.urls')),
     path('guide/', include('guide.urls')),
     path('student/',include('student.urls')),
+    path('project/',include('project.urls')),
+    path('team/',include('team.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
