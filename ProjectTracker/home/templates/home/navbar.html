@@ -1,0 +1,19 @@
+<!-- Navigation-->
+{% load static %}
+
+
+<nav class="navbar">
+    <a href="/" class="navbar_logo">Infinity</a>
+    <div class="navbar_toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <div class="navbar_menu">
+        <a href="{% url 'home:home' %}" class="navbar_link">Home</a>
+        <a href="{% url 'guide:guide_list' %}" class="navbar_link">Guide</a>
+        <a href="{% url 'student:student_list' %}" class="navbar_link">Students</a>
+        <a href="{% url 'home:support' %}" class="navbar_link">Support</a>
+    </div>
+
+</nav>

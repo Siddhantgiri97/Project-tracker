@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+
+
+{% block title %}
+Guide Details
+{% endblock title %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row m-2">
+        <div class="col-md">
+            <h3 class="alert alert-success text-center">Guide List</h3>
+            <div class="card card-body">
+
+                <table class="">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Guide Name</th>
+                        <th>Department</th>
+                        <th>Specialization </th>
+                    </tr>
+
+                    {% for guide in guides %}
+
+
+
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>Prof. {{guide.guide_name}}</td>
+                        <td>{{guide.guide_department}}</td>
+                        <td>{{guide.guide_specilization}} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+
+
+{% block title %}
+Student Details
+{% endblock title %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row m-2">
+        <div class="col-md">
+            <h3 class="alert alert-success text-center">Student List</h3>
+            <div class="card card-body">
+
+                <table class="">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Student Name</th>
+                        <th>Department</th>
+                        <th>Roll no </th>
+                    </tr>
+
+                    {% for student in students %}
+
+
+
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{student.student_name}}</td>
+                        <td>{{student.student_branch}}</td>
+                        <td>{{student.student_roll}} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

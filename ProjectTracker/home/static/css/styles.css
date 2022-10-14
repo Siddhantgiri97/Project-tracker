@@ -11410,7 +11410,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../images/header-bg.jpg");
+  background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11777,3 +11777,55 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+
+        table {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-collapse: collapse;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 800px;
+            height: 200px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        tr {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        tr:hover,
+        tr:focus {
+            transform: scaleY(1.02);
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        table td,
+        table th {
+            border: 1px solid #cccccc;
+            padding: 10px 12px;
+        }
+
+        table th {
+            font-weight: bold;
+            background-color: #1fb3d3;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        tr:last-child {
+            border-bottom: 2px solid #1fb3d3;
+        }
+
+        @media only screen and (max-width: 870px) {
+            table {
+                width: 100%;
+            }
+        }
