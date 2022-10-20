@@ -15,8 +15,15 @@ Guide Details
 <div class="container">
     <div class="row m-2">
         <div class="col-md">
+
+            <a href="{% url 'guide:add_guide' %}" class="btn btn-primary">Add Guide</a>
+        </div>
+
+    </div>
+    <div class="row m-2">
+        <div class="col-md">
             <h3 class="alert alert-success text-center">Guide List</h3>
-            <div class="card card-body">
+            <div class="card card-body table-responsive">
 
                 <table class="">
                     <tr>
@@ -27,9 +34,6 @@ Guide Details
                     </tr>
 
                     {% for guide in guides %}
-
-
-
                     <tr>
                         <td>{{ forloop.counter }}</td>
                         <td>Prof. {{guide.guide_name}}</td>

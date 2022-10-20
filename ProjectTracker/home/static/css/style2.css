@@ -1,5 +1,5 @@
 :root {
-	--red: #f9032f;
+	--red: #ffc800;
 	--black: #000;
 	--white: #fff;
 }
@@ -26,13 +26,13 @@
 	text-decoration: none;
 	padding-left: 1rem;
 	font-size: 1.5rem;
-	font-weight: 600;
+	font-weight: 800;
 }
 .navbar_link {
 	color: var(--white);
 	text-decoration: none;
 	padding: 0rem 1rem;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .navbar_link:hover {
@@ -52,7 +52,7 @@
 	.navbar_menu {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, 100px);
+		grid-template-rows: repeat(6, 100px);
 		position: absolute;
 		width: 100%;
 		top: -1000px;
@@ -93,7 +93,7 @@
 }
 
 /* Hero Section */
-
+/* 
 .hero {
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
 		url("./images/ban1.jpg");
@@ -135,10 +135,11 @@
 }
 .button:hover {
 	background: var(--black);
-}
+}*/
+
 /* 
 Services Section */
-
+/*
 .services {
 	padding: 8rem calc((100vw - 1200px) / 2);
 }
@@ -177,11 +178,11 @@ Services Section */
 	.services_container {
 		grid-template-columns: 1fr;
 	}
-}
+} */
 
 /* membership section */
 
-.memberships {
+/* .memberships {
 	background: var(--black);
 	color: var(--white);
 	padding: 6rem calc((100vw - 1100px) / 2);
@@ -238,11 +239,11 @@ Services Section */
 		width: 90%;
 		margin-bottom: 2rem;
 	}
-}
+} */
 
 /* team section */
 
-.team {
+/* .team {
 	padding: 8rem calc((100vw - 1100px) / 2);
 }
 .team_wrapper {
@@ -331,11 +332,11 @@ Services Section */
 		grid-row: 2/3;
 		grid-column: 1/2;
 	}
-}
+} */
 
 /* Email section */
 
-.email {
+/* .email {
 	background: linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 0.6) 0%,
@@ -402,11 +403,11 @@ form {
 		width: 100%;
 		min-width: 250px;
 	}
-}
+} */
 
 /* Footer section */
 
-.footer {
+/* .footer {
 	padding: 5rem calc((100vw - 1100px) / 2);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -470,4 +471,4 @@ form {
 	.footer_links {
 		padding: 1rem;
 	}
-}
+} */

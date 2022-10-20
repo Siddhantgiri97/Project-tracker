@@ -15,15 +15,22 @@ Team Details
 <div class="container">
     <div class="row m-2">
         <div class="col-md">
+
+            <a href="{% url 'team:add_team' %}" class="btn btn-primary">Add Team</a>
+        </div>
+
+    </div>
+    <div class="row m-2">
+        <div class="col-md">
             <h3 class="alert alert-success text-center">Team List</h3>
-            <div class="card card-body">
+            <div class="card card-body table-responsive">
 
                 <table class="">
                     <tr>
                         <th>Sr.No</th>
                         <th>Team Name</th>
                         <th>Members</th>
-                        
+
                     </tr>
 
                     {% for team in teams %}
@@ -36,23 +43,34 @@ Team Details
                         <td>{{team.team_name}}</td>
                         <td>
                             <table>
-                            <tr>
-                                <td>{{team.member1}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{team.member2}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{team.member3}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{team.member4}}</td>
-                            </tr>
-                            
-                            
+                                <tr>
+                                    <td>{{team.member1}}</td>
+                                </tr>
+
+                                {% if team.member2 %}
+
+                                <tr>
+                                    <td>{{team.member2}}</td>
+                                </tr>
+                                {% endif %}
+
+                                {% if team.member3 %}
+
+                                <tr>
+                                    <td>{{team.member3}}</td>
+                                </tr>
+                                {% endif %}
+                                {% if team.member4 %}
+
+                                <tr>
+                                    <td>{{team.member4}}</td>
+                                </tr>
+                                {% endif %}
+
+
                             </table>
                         </td>
-                        
+
                     </tr>
                     {% endfor %}
                 </table>
