@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Team
 from .forms import TeamRegistration
 
@@ -16,8 +16,21 @@ def add_team(request):
         form = TeamRegistration(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('team:team')
+        return redirect('team:team_list')
     else:
         form = TeamRegistration()
     context = {'form': form}
     return render(request, "team/add_team.html", context)
+
+
+def update_team(request, pk):
+    team = Team.objects.get(id=pk)
+    if request.method == 'POST':
+        form = TeamRegistration(request.POST, instance=team)
+        if form.is_valid():
+            form.save()
+        return redirect('team:team_list')
+    else:
+        form = TeamRegistration(instance=team)
+    context = {'form': form}
+    return render(request, "team/update_team.html", context)

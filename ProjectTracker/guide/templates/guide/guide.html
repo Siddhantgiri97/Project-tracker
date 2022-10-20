@@ -43,8 +43,8 @@ Guide Details
                             <td>{{guide.guide_department}}</td>
                             <td>{{guide.guide_specilization}} </td>
                             <td>
-                                <a class="edit me-2" title="Edit" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
+                                <a href="{% url 'guide:update_guide' guide.id %}" class="edit me-2" title="Edit"
+                                    data-toggle="tooltip"><i class="bi bi-pencil-fill"></i></a>
                                 <a class="delete" title="Delete" data-toggle="tooltip"><i
                                         class="bi bi-trash3-fill"></i></a>
                             </td>
