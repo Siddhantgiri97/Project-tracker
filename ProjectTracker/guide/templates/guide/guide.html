@@ -21,7 +21,7 @@ Guide Details
 
     </div>
     <div class="row m-2">
-        <div class="col-md-12">
+        <div class="col-md">
             <h3 class="alert alert-success text-center">Guide List</h3>
             <div class="card card-body table-responsive">
 
@@ -32,6 +32,7 @@ Guide Details
                             <th>Guide Name</th>
                             <th>Department</th>
                             <th>Specialization </th>
+                            <th>Action </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,6 +42,12 @@ Guide Details
                             <td>Prof. {{guide.guide_name}}</td>
                             <td>{{guide.guide_department}}</td>
                             <td>{{guide.guide_specilization}} </td>
+                            <td>
+                                <a class="edit me-2" title="Edit" data-toggle="tooltip"><i
+                                        class="bi bi-pencil-fill"></i></a>
+                                <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="bi bi-trash3-fill"></i></a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>

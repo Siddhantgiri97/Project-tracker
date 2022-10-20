@@ -22,7 +22,7 @@ Student Details
     </div>
 
     <div class="row m-2">
-        <div class="col-md-12">
+        <div class="col-md">
             <h3 class="alert alert-success text-center">Student List</h3>
             <div class="card card-body table-responsive">
 
@@ -33,6 +33,7 @@ Student Details
                             <th>Student Name</th>
                             <th>Department</th>
                             <th>Roll no </th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +47,11 @@ Student Details
                             <td>{{student.student_name}}</td>
                             <td>{{student.student_branch}}</td>
                             <td>{{student.student_roll}} </td>
+                            <td>
+                                <a class="edit me-2" title="Edit" data-toggle="tooltip"><i class="bi bi-pencil-fill"></i></a>
+                                <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="bi bi-trash3-fill"></i></a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
