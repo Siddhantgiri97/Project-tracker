@@ -22,29 +22,33 @@ Student Details
     </div>
 
     <div class="row m-2">
-        <div class="col-md">
+        <div class="col-md-12">
             <h3 class="alert alert-success text-center">Student List</h3>
             <div class="card card-body table-responsive">
 
-                <table class="">
-                    <tr>
-                        <th>Sr.No</th>
-                        <th>Student Name</th>
-                        <th>Department</th>
-                        <th>Roll no </th>
-                    </tr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Student Name</th>
+                            <th>Department</th>
+                            <th>Roll no </th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                    {% for student in students %}
+                        {% for student in students %}
 
 
 
-                    <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{student.student_name}}</td>
-                        <td>{{student.student_branch}}</td>
-                        <td>{{student.student_roll}} </td>
-                    </tr>
-                    {% endfor %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{student.student_name}}</td>
+                            <td>{{student.student_branch}}</td>
+                            <td>{{student.student_roll}} </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
                 </table>
             </div>
         </div>

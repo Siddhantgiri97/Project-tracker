@@ -31,9 +31,6 @@
             border-collapse: collapse;
             text-align: center;
             position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 0%);
             width: 800px;
             height: 200px;
             border-radius: 5px 5px 0 0;
@@ -51,30 +48,20 @@
         }
 
         table td,
-        table th {
+        table thead {
             border: 1px solid #cccccc;
             padding: 10px 12px;
         }
 
-        table th {
+        table thead {
             font-weight: bold;
             background-color: #1fb3d3;
             color: #fff;
             text-transform: uppercase;
         }
 
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
         tr:last-child {
             border-bottom: 2px solid #1fb3d3;
-        }
-
-        @media only screen and (max-width: 870px) {
-            table {
-                width: 100%;
-            }
         }
     </style>
 </head>

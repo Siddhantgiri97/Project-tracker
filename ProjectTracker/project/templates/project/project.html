@@ -21,29 +21,32 @@ Project Details
 
     </div>
     <div class="row m-2">
-        <div class="col-md">
+        <div class="col-md-12">
             <h3 class="alert alert-success text-center">Project List</h3>
             <div class="card card-body table-responsive">
 
-                <table class="">
-                    <tr>
-                        <th>Sr.No</th>
-                        <th>Project Title</th>
-                        <th>Project Guide</th>
-                        <th>Team Name </th>
-                    </tr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Project Title</th>
+                            <th>Project Guide</th>
+                            <th>Team Name </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for project in projects %}
 
-                    {% for project in projects %}
 
 
-
-                    <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{project.project_title}}</td>
-                        <td>{{project.project_guide}}</td>
-                        <td>{{project.team_name}} </td>
-                    </tr>
-                    {% endfor %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{project.project_title}}</td>
+                            <td>{{project.project_guide}}</td>
+                            <td>{{project.team_name}} </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
                 </table>
             </div>
         </div>

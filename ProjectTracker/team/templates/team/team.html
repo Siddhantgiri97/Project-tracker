@@ -21,58 +21,63 @@ Team Details
 
     </div>
     <div class="row m-2">
-        <div class="col-md">
+        <div class="col-md-12">
             <h3 class="alert alert-success text-center">Team List</h3>
-            <div class="card card-body table-responsive">
+            <div class="table-responsive">
 
-                <table class="">
-                    <tr>
-                        <th>Sr.No</th>
-                        <th>Team Name</th>
-                        <th>Members</th>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Team Name</th>
+                            <th>Members</th>
+                            <th>Action</th>
 
-                    </tr>
+                        </tr>
+                    </thead>
 
-                    {% for team in teams %}
-
-
-
-                    <tr>
-                        <td>{{ forloop.counter }}</td>
-
-                        <td>{{team.team_name}}</td>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td>{{team.member1}}</td>
-                                </tr>
-
-                                {% if team.member2 %}
-
-                                <tr>
-                                    <td>{{team.member2}}</td>
-                                </tr>
-                                {% endif %}
-
-                                {% if team.member3 %}
-
-                                <tr>
-                                    <td>{{team.member3}}</td>
-                                </tr>
-                                {% endif %}
-                                {% if team.member4 %}
-
-                                <tr>
-                                    <td>{{team.member4}}</td>
-                                </tr>
-                                {% endif %}
+                    <tbody>
+                        {% for team in teams %}
 
 
-                            </table>
-                        </td>
 
-                    </tr>
-                    {% endfor %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+
+                            <td>{{team.team_name}}</td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td>{{team.member1}}</td>
+                                    </tr>
+
+                                    {% if team.member2 %}
+
+                                    <tr>
+                                        <td>{{team.member2}}</td>
+                                    </tr>
+                                    {% endif %}
+
+                                    {% if team.member3 %}
+
+                                    <tr>
+                                        <td>{{team.member3}}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% if team.member4 %}
+
+                                    <tr>
+                                        <td>{{team.member4}}</td>
+                                    </tr>
+                                    {% endif %}
+
+                                </table>
+                            </td>
+                            <td>Completed</td>
+
+                        </tr>
+                        {% endfor %}
+                    </tbody>
                 </table>
             </div>
         </div>
