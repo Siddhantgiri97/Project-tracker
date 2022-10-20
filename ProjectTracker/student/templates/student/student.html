@@ -50,7 +50,7 @@ Student Details
                             <td>
                                 <a href="{% url 'student:update_student' student.id %}" class="edit me-2" title="Edit"
                                     data-toggle="tooltip"><i class="bi bi-pencil-fill"></i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                <a href="{% url 'student:delete_student' student.id %}" class="delete text-danger" title="Delete" data-toggle="tooltip"><i
                                         class="bi bi-trash3-fill"></i></a>
                             </td>
                         </tr>

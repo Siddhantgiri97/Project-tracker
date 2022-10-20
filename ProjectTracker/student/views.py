@@ -34,3 +34,10 @@ def update_student(request, pk):
         form = StudentRegistration(instance=student)
     context = {'form': form}
     return render(request, "student/update_student.html", context)
+
+
+
+def delete_student(request, pk):
+    student = Student.objects.get(id=pk)
+    student.delete()
+    return redirect('student:student_list')

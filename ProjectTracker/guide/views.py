@@ -33,3 +33,10 @@ def update_guide(request, pk):
         form = GuideRegistration(instance=guide)
     context = {'form': form}
     return render(request, "guide/update_guide.html", context)
+
+
+def delete_guide(request, pk):
+    guide = Guide.objects.get(id=pk)
+    guide.delete()
+    return redirect('guide:guide_list')
+   

@@ -34,3 +34,9 @@ def update_team(request, pk):
         form = TeamRegistration(instance=team)
     context = {'form': form}
     return render(request, "team/update_team.html", context)
+
+
+def delete_team(request, pk):
+    team = Team.objects.get(id=pk)
+    team.delete()
+    return redirect('team:team_list')

@@ -34,3 +34,9 @@ def update_project(request, pk):
         form = ProjectRegistration(instance=project)
     context = {'form': form}
     return render(request, "project/update_project.html", context)
+
+
+def delete_project(request, pk):
+    project = Project.objects.get(id=pk)
+    project.delete()
+    return redirect('project:project_list')
